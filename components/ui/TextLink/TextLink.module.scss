@@ -1,0 +1,25 @@
+@import '../../../css/common.scss';
+
+.Link {
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+    color: $color-accent-secondary;
+    transition: all $transition ease;
+
+    &:hover {
+        color: $color-default;
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
