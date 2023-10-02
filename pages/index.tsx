@@ -6,7 +6,7 @@ interface IPageProps {}
 const Page: FC<IPageProps> = (props) => {
     return (
         <Layout title={'Qwick'} description={'Qwick'}>
-            <div>Main</div>
+            <div>main</div>
         </Layout>
     )
 }

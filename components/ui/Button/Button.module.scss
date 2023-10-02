@@ -1,0 +1,70 @@
+@import '../../../css/common.scss';
+
+.Button {
+    min-width: 148px;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-default;
+    background-color: $color-ui-bg;
+    border-radius: 6px;
+    transition: all $transition ease;
+
+    &:hover {
+        background-color: $color-accent-secondary;
+        color: #fff;
+    }
+
+    &.FullWidth {
+        width: 100%;
+    }
+
+    &[data-size='small'] {
+        &.Outline {
+            color: $color-accent-secondary;
+            border: 1px solid $color-accent-secondary;
+            background-color: transparent;
+        }
+    }
+
+    &[data-size='middle'] {
+        min-width: 150px;
+        min-height: 46px;
+        border-radius: 8px;
+    }
+
+    &[data-size='large'] {
+        min-width: 204px;
+        min-height: 46px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    &[data-type='default'] {
+    }
+
+    &[data-type='secondary'] {
+        background-color: $color-accent-secondary;
+        color: #fff;
+
+        &:hover {
+            background-color: $color-ui-bg;
+            color: $color-default;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

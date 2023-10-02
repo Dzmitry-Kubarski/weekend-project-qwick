@@ -1,0 +1,64 @@
+@import '../../../css/common.scss';
+
+.Section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .BtnSubmit {
+        min-height: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+.TextField {
+    &:not(:last-child) {
+        margin-bottom: 36px;
+    }
+}
+
+.PasswordField {
+    margin-bottom: 20px;
+}
+
+.ForgotPasswordWrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.Line {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-bottom: 16px;
+}
+
+.NotRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        color: $color-accent-primary;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
