@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react'
 import classes from './Layout.module.scss'
 import Head from 'next/head'
+import Menu from '@/features/Menu/Menu'
 
 interface IProps {
     title: string
@@ -19,7 +20,8 @@ const Layout: FC<IProps> = ({ title, keywords, description, children }) => {
             </Head>
 
             <div className={classes.Layout}>
-                <main>{children}</main>
+                <Menu />
+                <main className={classes.Main}>{children}</main>
             </div>
         </>
     )

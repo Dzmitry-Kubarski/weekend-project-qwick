@@ -1,0 +1,180 @@
+@import '../../css/common.scss';
+
+.Wrap {
+    flex-shrink: 0;
+    min-width: 270px;
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3a78f2;
+    border-radius: 0 40px 40px 0;
+    padding: 30px 0;
+}
+
+.Logo {
+    font-size: 31px;
+    line-height: 31px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.Menu {
+    padding-left: 24px;
+}
+
+.MenuItemWrap {
+    position: relative;
+
+    &.IsActive {
+        .MenuItem {
+            background-color: $color-ui-bg;
+
+            &:hover {
+                background-color: $color-ui-bg;
+            }
+        }
+
+        .MenuActiveDecor {
+            opacity: 1;
+        }
+
+        .MenuName {
+            color: $color-accent-primary;
+        }
+
+        .MenuIcon {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .MenuIconHover {
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
+}
+
+.MenuItem {
+    width: fit-content;
+    min-width: 212px;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 12px;
+    padding-left: 10px;
+    transition: all $transition $transition-style;
+
+    &:hover {
+        background-color: rgba($color-ui-bg, 0.3);
+    }
+}
+
+.MenuIconWrap {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuIcon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all $transition $transition-style;
+}
+
+.MenuIconHover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all $transition $transition-style;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.MenuName {
+    color: #fff;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-left: 10px;
+}
+
+.MenuActiveDecor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 10px;
+    background-color: $color-ui-bg;
+    border-radius: 12px 0 0 12px;
+    opacity: 0;
+}
+
+.Footer {
+    margin-top: auto;
+    padding-left: 46px;
+}
+
+.Policy,
+.FooterText {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: #b6d3ff;
+}
+
+.Policy {
+    display: inline-block;
+    margin-bottom: 12px;
+    transition: all $transition $transition-style;
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
+}
+
+.FooterText {
+    margin-bottom: 24px;
+}
+
+.BtnChatBot {
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+@media only screen and (min-width: $desktopWide) {
+    .Wrap {
+        padding: 58px 0 70px 0;
+    }
+
+    .Logo {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+    .Wrap {
+        display: none;
+    }
+}
