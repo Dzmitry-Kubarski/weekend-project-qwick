@@ -5,7 +5,7 @@
     line-height: 12px;
     letter-spacing: 0.3px;
     color: $color-accent-secondary;
-    transition: all $transition ease;
+    transition: all $transition $transition-style;
 
     &:hover {
         color: $color-default;

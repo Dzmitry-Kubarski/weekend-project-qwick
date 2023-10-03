@@ -11,7 +11,7 @@
     color: $color-default;
     background-color: $color-ui-bg;
     border-radius: 6px;
-    transition: all $transition ease;
+    transition: all $transition $transition-style;
 
     &:hover {
         background-color: $color-accent-secondary;
