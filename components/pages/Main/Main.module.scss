@@ -1,5 +1,118 @@
 @import '../../../css/common.scss';
 
+.Section {
+    position: relative;
+
+    .ModalWrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-top: 146px;
+    }
+
+    .ModalInner {
+        align-items: flex-start;
+        width: 100%;
+        max-width: 460px;
+        padding: 34px;
+    }
+}
+
+.BtnInfo {
+    position: absolute;
+    right: 0;
+    top: 96px;
+}
+
+.Cards {
+    display: flex;
+}
+
+.Card {
+    width: 100%;
+    max-width: 224px;
+    min-height: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $color-ui-bg;
+    border-radius: 8px;
+    padding: 24px;
+
+    &:not(:last-child) {
+        margin-right: 22px;
+    }
+
+    &[data-color='Y'] {
+        background: linear-gradient(214deg, rgba(79, 139, 228, 0.8) 1.1%, #3a78f2 98.17%);
+        box-shadow: 2px 4px 25px 0px rgba(42, 83, 144, 0.4);
+
+        .CardCount,
+        .CardTitle {
+            color: #fff;
+        }
+
+        .CardIconWrap {
+            svg path {
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+.CardIconWrap {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.CardTitle {
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 600;
+    color: $color-accent-primary;
+    margin-bottom: 8px;
+}
+
+.CardCount {
+    font-size: 27px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-primary;
+}
+
+.ModalTitle {
+    font-size: 17px;
+    line-height: normal;
+    font-weight: 400;
+    color: $color-accent-secondary;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.ModalText {
+    font-size: 14px;
+    font-style: normal;
+    color: $color-accent-primary;
+
+    b {
+        font-weight: 600;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+
+.ModalBtn {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media only screen and (min-width: $desktopWide) {
 }
 
@@ -10,4 +123,46 @@
 }
 
 @media only screen and (max-width: $mobile) {
+    .Section {
+        .ModalInner {
+            padding: 24px 16px;
+        }
+    }
+
+    .BtnInfo {
+        top: 56px;
+    }
+
+    .ModalTitle {
+        margin-bottom: 22px;
+    }
+
+    .Cards {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .Card {
+        max-width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px;
+
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    .CardIconWrap {
+        // width: 47px;
+        // height: 47px;
+
+        margin-bottom: 10px;
+    }
+
+    .ModalBtn {
+        margin-top: 30px;
+    }
 }

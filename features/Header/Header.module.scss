@@ -1,0 +1,44 @@
+@import '../../css/common.scss';
+
+.Wrap {
+    display: flex;
+    align-items: center;
+}
+
+.Title {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 600;
+    color: $color-accent-primary;
+}
+
+.Row {
+    margin-left: auto;
+}
+
+.Avatar {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-left: 34px;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
