@@ -1,0 +1,16 @@
+@import '../../../css/common.scss';
+
+.ButtonInfo {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-accent-secondary;
+    border-radius: 50%;
+    transition: all $transition $transition-style;
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
+}
