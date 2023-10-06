@@ -17,7 +17,7 @@ const Profile = () => {
 
     return (
         <section className={classes.Section}>
-            <Header />
+            <Header title='Личный профиль' />
 
             <div className={classes.Tabs}>
                 <button

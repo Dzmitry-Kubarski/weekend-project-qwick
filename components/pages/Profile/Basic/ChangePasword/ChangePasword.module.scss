@@ -44,6 +44,11 @@
     font-weight: 600;
     line-height: normal;
     color: $color-accent-secondary;
+    transition: all $transition $transition-style;
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
 }
 
 .ModalTitle {
