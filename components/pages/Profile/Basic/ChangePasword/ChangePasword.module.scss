@@ -1,0 +1,77 @@
+@import '../../../../../css/common.scss';
+
+.Field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+}
+
+.FieldTextSuccess,
+.FieldTextError {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.FieldTextSuccess {
+    color: #25c48c;
+}
+
+.FieldTextError {
+    color: #ff3b30;
+}
+
+.FieldIcon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FieldResult {
+    min-width: 134px;
+    max-width: 134px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-secondary;
+}
+
+.ModalTitle {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+    margin-bottom: 28px;
+}
+
+.PasswordField {
+    &:not(:last-of-type) {
+        margin-bottom: 28px;
+    }
+}
+
+.ModalBtn {
+    margin-top: 34px;
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

@@ -1,0 +1,33 @@
+@import '../../../../css/common.scss';
+
+.Wrap {
+}
+
+.Fields {
+    margin-bottom: 42px;
+}
+
+.Name {
+    font-size: 17px;
+    line-height: normal;
+    font-weight: 600;
+    color: $color-accent-primary;
+    margin-bottom: 6px;
+}
+
+.Position {
+    font-size: 14px;
+    line-height: normal;
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

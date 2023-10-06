@@ -1,0 +1,142 @@
+@import '../../../../../css/common.scss';
+
+.Field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+}
+
+.FieldTextSuccess,
+.FieldTextError {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.FieldTextSuccess {
+    color: #25c48c;
+}
+
+.FieldTextError {
+    color: #ff3b30;
+}
+
+.FieldIcon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+    }
+}
+
+.FieldInput {
+    max-width: 134px;
+    min-width: 134px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-primary;
+    background-color: $color-ui-bg;
+    border-radius: 2px;
+    padding-left: 12px;
+
+    &:focus {
+        color: $color-default;
+    }
+}
+
+.FieldResult {
+    min-width: 134px;
+    max-width: 134px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-primary;
+    padding-left: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.FieldBtnWrap {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+
+    button {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg path {
+            transition: all $transition $transition-style;
+        }
+    }
+}
+
+.FieldBtnEdit {
+    &:hover {
+        svg path {
+            fill: $color-accent-secondary;
+        }
+    }
+}
+
+.FieldBtnSave {
+    svg {
+        max-width: 14px;
+        max-height: 100%;
+    }
+
+    svg path {
+        stroke: $color-default;
+    }
+
+    &:hover {
+        svg path {
+            stroke: $color-accent-secondary;
+        }
+    }
+}
+
+.FieldBtnClose {
+    svg {
+        max-width: 14px;
+        max-height: 100%;
+    }
+
+    svg path {
+        stroke: $color-default;
+    }
+
+    &:hover {
+        svg path {
+            stroke: $color-accent-secondary;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
