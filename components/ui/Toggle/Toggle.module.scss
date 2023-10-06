@@ -1,0 +1,118 @@
+@import '../../../css/common.scss';
+
+.Toggle {
+    input {
+        display: none;
+
+        ~ label {
+            position: relative;
+            display: block;
+            width: 42px;
+            height: 22px;
+            border-radius: 550px;
+            transition: transform 200ms cubic-bezier(0.41, -0.01, 0.63, 1.09);
+            cursor: pointer;
+            background-color: $color-ui-bg;
+            box-shadow: 0px 1px 2px 0px rgba(79, 139, 228, 0.23) inset;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                transition: all $transition $transition-style;
+            }
+
+            &::after {
+                background-color: #dfebf9;
+            }
+
+            &::before {
+            }
+        }
+
+        &:checked ~ label {
+            &::after {
+                background-color: $color-accent-secondary;
+
+                transform: translateX(20px);
+            }
+
+            &::before {
+                background-color: $color-ui-bg;
+                top: 2px;
+                left: 2px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+    .Toggle {
+        input {
+            display: none;
+
+            ~ label {
+                width: 28px;
+                height: 14px;
+
+                &::before,
+                &::after {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+
+            &:checked ~ label {
+                &::after {
+                    transform: translateX(14px);
+                }
+
+                &::before {
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .Toggle {
+        input {
+            display: none;
+
+            ~ label {
+                width: 28px;
+                height: 14px;
+
+                &::before,
+                &::after {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+
+            &:checked ~ label {
+                &::after {
+                    transform: translateX(14px);
+                }
+
+                &::before {
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+        }
+    }
+}

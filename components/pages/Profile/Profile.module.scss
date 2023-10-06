@@ -70,4 +70,17 @@
 }
 
 @media only screen and (max-width: $mobile) {
+    .Tabs {
+        width: 100%;
+    }
+
+    .Tab {
+        max-width: 154px;
+        min-width: 33.333333%;
+
+        &:nth-child(2) {
+            padding: 0 10px;
+            padding-bottom: 10px;
+        }
+    }
 }

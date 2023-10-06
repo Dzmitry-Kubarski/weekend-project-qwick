@@ -14,8 +14,7 @@
     transition: all $transition $transition-style;
 
     &:hover {
-        background-color: $color-accent-secondary;
-        color: #fff;
+        opacity: $hover-opacity;
     }
 
     &.FullWidth {
@@ -51,8 +50,7 @@
         color: #fff;
 
         &:hover {
-            background-color: $color-ui-bg;
-            color: $color-default;
+            opacity: $hover-opacity;
         }
     }
 }

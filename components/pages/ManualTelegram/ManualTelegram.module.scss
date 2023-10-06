@@ -1,0 +1,267 @@
+@import '../../../css/common.scss';
+
+.Section {
+    width: 100%;
+    min-height: 100%;
+    padding: 58px 30px;
+
+    .Logo {
+        font-size: 31px;
+        line-height: 31px;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+
+    .BackLink {
+        display: block;
+        width: fit-content;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+    }
+}
+
+.Inner {
+    max-width: 1288px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: normal;
+    color: $color-accent-primary;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 22px;
+}
+
+.Info {
+    text-align: center;
+    margin-bottom: 66px;
+}
+
+.Text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: $color-accent-primary;
+
+    b {
+        font-weight: 600;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 14px;
+    }
+}
+
+.Desc {
+    position: relative;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 66px;
+    }
+}
+
+.DescTitle {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-primary;
+    margin-bottom: 42px;
+}
+
+.Success {
+    text-align: center;
+}
+
+.SuccessIcon {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #87ed97;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    svg {
+        width: 54px;
+        height: auto;
+    }
+
+    svg path {
+        stroke: #fff;
+        stroke-width: 1px;
+    }
+}
+
+.SuccessText {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-accent-primary;
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+    .Section {
+        padding: 28px 30px;
+
+        .BackLink {
+            margin-bottom: 28px;
+        }
+    }
+
+    .Info {
+        margin-bottom: 30px;
+    }
+
+    .Text {
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .Desc {
+        position: relative;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .DescTitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .SuccessIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+
+        svg {
+            width: 32px;
+            height: auto;
+        }
+    }
+
+    .SuccessText {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+    .Section {
+        padding: 28px 20px;
+
+        .BackLink {
+            margin-bottom: 28px;
+        }
+    }
+
+    .Info {
+        margin-bottom: 30px;
+    }
+
+    .Text {
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .Desc {
+        position: relative;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .DescTitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .SuccessIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+
+        svg {
+            width: 32px;
+            height: auto;
+        }
+    }
+
+    .SuccessText {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .Section {
+        padding: 28px 10px;
+
+        .BackLink {
+            margin-bottom: 28px;
+        }
+    }
+
+    .Info {
+        margin-bottom: 30px;
+    }
+
+    .Text {
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .Desc {
+        position: relative;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .DescTitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .SuccessIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+
+        svg {
+            width: 32px;
+            height: auto;
+        }
+    }
+
+    .SuccessText {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
