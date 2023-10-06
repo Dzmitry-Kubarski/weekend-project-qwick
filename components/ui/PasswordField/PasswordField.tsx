@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, useState } from 'react'
-import classes from './PasswordField.module.scss'
 import cn from 'classnames'
+import classes from './PasswordField.module.scss'
 import IconShowPassword from '@/components/icons/IconShowPassword'
 import IconHidePassword from '@/components/icons/IconHidePassword'
 
@@ -10,9 +10,10 @@ interface IProps {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void
     placeholder?: string
     className?: string
+    notBorder?: boolean
 }
 
-const PasswordField: FC<IProps> = ({ value, label, onChange, placeholder = '', className }) => {
+const PasswordField: FC<IProps> = ({ value, label, onChange, placeholder = '', className, notBorder }) => {
     const [isShow, setIsShow] = useState(false)
 
     const toggleIsShow = () => {
@@ -20,7 +21,7 @@ const PasswordField: FC<IProps> = ({ value, label, onChange, placeholder = '', c
     }
 
     return (
-        <div className={cn(classes.Field, className)}>
+        <div className={cn(classes.Field, { [classes.NotBorder]: notBorder }, className)}>
             <input
                 className={classes.Input}
                 type={isShow ? 'text' : 'password'}

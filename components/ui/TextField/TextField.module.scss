@@ -1,8 +1,14 @@
 @import '../../../css/common.scss';
 
 .Field {
-    width: 100%;
     position: relative;
+    width: 100%;
+
+    &.HideLabel {
+        .Label {
+            display: none;
+        }
+    }
 }
 
 .Input {

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import classes from './Modal.module.scss'
 import cn from 'classnames'
+import classes from './Modal.module.scss'
 
 interface IProps {
     isOpen: boolean

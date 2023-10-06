@@ -1,16 +1,23 @@
-@import '../../../css/common.scss';
+@import '../../../../css/common.scss';
 
-.Layout {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-    display: flex;
+.Wrap {
 }
 
-.Main {
-    flex-grow: 1;
-    padding: 50px 32px;
-    padding-left: 302px;
+.Fields {
+    margin-bottom: 42px;
+}
+
+.Name {
+    font-size: 17px;
+    line-height: normal;
+    font-weight: 600;
+    color: $color-accent-primary;
+    margin-bottom: 6px;
+}
+
+.Position {
+    font-size: 14px;
+    line-height: normal;
 }
 
 @media only screen and (min-width: $desktopWide) {
@@ -23,8 +30,4 @@
 }
 
 @media only screen and (max-width: $mobile) {
-    .Main {
-        padding: 30px 10px;
-        padding-left: 10px;
-    }
 }

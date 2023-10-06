@@ -1,6 +1,11 @@
 @import '../../css/common.scss';
 
 .Wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
     flex-shrink: 0;
     min-width: 270px;
     max-width: 270px;
