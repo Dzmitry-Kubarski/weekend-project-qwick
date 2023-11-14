@@ -6,6 +6,16 @@ import classes from './Menu.module.scss'
 import IconChatBot from '@/components/icons/IconChatBot'
 import { mockData } from './mockData'
 
+const onIsActiveLink = (asPath: string, link: string) => {
+    const isHome = link === '/'
+
+    if (isHome) {
+        return asPath === link
+    } else {
+        return asPath.includes(link)
+    }
+}
+
 interface IItemMenu {
     name: string
     url: string
@@ -26,7 +36,7 @@ const Menu: FC<IProps> = ({ className }) => {
 
             <menu className={classes.Menu}>
                 {(mockData.menuList as IItemMenu[]).map((item, index) => (
-                    <div className={cn(classes.MenuItemWrap, { [classes.IsActive]: asPath === item.url })} key={index}>
+                    <div className={cn(classes.MenuItemWrap, { [classes.IsActive]: onIsActiveLink(asPath, item.url) })} key={index}>
                         <Link className={cn(classes.MenuItem)} href={item.url}>
                             <div className={classes.MenuIconWrap}>
                                 {item?.icon && <item.icon className={classes.MenuIcon} />}

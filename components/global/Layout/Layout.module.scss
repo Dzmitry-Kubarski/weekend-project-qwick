@@ -9,11 +9,16 @@
 
 .Main {
     flex-grow: 1;
-    padding: 50px 32px;
+    padding: 30px;
     padding-left: 302px;
+
+    overflow: hidden;
 }
 
 @media only screen and (min-width: $desktopWide) {
+    .Main {
+        padding: 50px 32px;
+    }
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {

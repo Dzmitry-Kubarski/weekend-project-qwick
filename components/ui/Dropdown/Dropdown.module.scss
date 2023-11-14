@@ -1,0 +1,123 @@
+@import '../../../css/common.scss';
+
+.Wrap {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    max-width: 236px;
+
+    &.Open {
+        .Overlay {
+            opacity: 1;
+            pointer-events: visible;
+            visibility: visible;
+        }
+
+        .Items {
+            opacity: 1;
+            pointer-events: visible;
+            visibility: visible;
+        }
+    }
+}
+
+.Overlay {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.7);
+    transition: all $transition $transition-style;
+
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.Btn {
+    min-height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 8px;
+    background-color: $color-ui-bg;
+    transition: all $transition $transition-style;
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
+
+    svg {
+        margin-left: 10px;
+    }
+}
+
+.Items {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all $transition $transition-style;
+
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.Item {
+    min-height: 46px;
+    background-color: #fff;
+    overflow: hidden;
+
+    &:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 8px 8px;
+    }
+
+    &.Active {
+        background-color: $color-accent-secondary;
+        color: #fff;
+    }
+}
+
+.Link {
+    min-height: 46px;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    padding-left: 52px;
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
